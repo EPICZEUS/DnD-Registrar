@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DnDRegistrar</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <style>
+      .nav {
+        display: inline;
+      }
+    </style>
+  </head>
+
+  <header>
+    <%= button_to 'Home', '/', method: :get, form_class: 'nav' %>
+    <%= button_to 'Users', users_path, method: :get, form_class: 'nav' %>
+    <%= button_to 'Characters', characters_path, method: :get, form_class: 'nav' %>
+    <%= button_to 'Campaigns', campaigns_path, method: :get, form_class: 'nav' %>
+  </header>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>
